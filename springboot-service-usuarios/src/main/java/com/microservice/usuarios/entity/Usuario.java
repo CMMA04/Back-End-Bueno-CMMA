@@ -43,8 +43,8 @@ public class Usuario implements Serializable {
 	private String apellido;
 	
 	@ManyToMany(fetch = FetchType.LAZY)
-	@JoinTable(name = "usuarios_to_roles", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "rooles-id")
-			  , uniqueConstraints = {@UniqueConstraint(columnNames = {"user-id","rooles_id"})})
+	@JoinTable(name = "usuarios_to_roles", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "rooles_id")
+			  , uniqueConstraints = {@UniqueConstraint(columnNames = {"user_id","rooles_id"})})
 	private List<Role> roles; 
 
 	public Long getId() {
