@@ -12,6 +12,7 @@ import com.microservice.store.models.Celular;
 import com.microservice.store.models.Store;
 import com.microservice.store.services.StoreService;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.ribbon.proxy.annotation.Hystrix;
 
 @RestController
 public class StoreController {
@@ -30,13 +31,11 @@ public class StoreController {
 		return storeService.findById(id, cantidad);
 	}
 	
-	public Store metodoGenerico(Long id, Integer cantidad) {
+	public Store metodoGenerico(Long id,Integer cantidad) {
 		Store store = new Store();
-		Celular cel = new Celular(id, "El cel del profe", "Samsung");
+		Celular cel = new Celular(id, "Celular de Marroquín","Samsung Galaxy A50");
 		store.setCantidad(cantidad);
 		store.setCel(cel);
-		
 		return store;
-		
 	}
 }

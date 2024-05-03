@@ -23,13 +23,11 @@ public class CelularController {
 	
 	@Autowired
 	private Environment env;
-	
 	@Autowired
 	private CelularService service;
 	
 	@Value("${server.port}")
 	private Integer port;
-	
 	
 	@GetMapping("/list")
 	public List<Celular> list(){
@@ -39,16 +37,14 @@ public class CelularController {
 		}).collect(Collectors.toList());
 	}
 	
-	
 	@GetMapping("/celular/{id}")
 	public Celular detail(@PathVariable Long id){
 		
 		try {
-			Thread.sleep(2000L);
+			Thread.sleep(200L);
 		}catch(InterruptedException e) {
 			e.printStackTrace();
 		}
-		
 		return service.findById(id);
 	}
 	
