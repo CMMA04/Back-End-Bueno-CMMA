@@ -34,7 +34,7 @@ public class SwaggerConfig {
 				"Servicio para venta celulares",
 				"1.0.0",
 				"Terminos de servicios",
-				new Contact("Christian","https://www.google.com","christian.mendozacrdn@uanl.edu.mx"),
+				new Contact("Carlos Marroquin","https://www.google.com","carlos-.marroquinayl@uanl.edu.mx"),
 				"LICENCE",
 				"LICENCE URL",
 				Collections.emptyList()

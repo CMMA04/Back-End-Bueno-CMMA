@@ -8,6 +8,6 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 @EnableAutoConfiguration(exclude = {DataSourceAutoConfiguration.class} )
 public class SpringbootServiceCommonsUsersApplication {
 
-	
+
 
 }
